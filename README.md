@@ -5,10 +5,10 @@
 🌌 Screenshots
 
 ### Home Page
-![Home Page](/frontend/public/homepage.png)
+![Home Page](/public/homepage.png)
 
 ### Jobtracker
-![Jobtracker](/frontend/public/jobtracker.png)
+![Jobtracker](/public/jobtracker.png)
 
 
 ## Overview
