@@ -7,6 +7,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://student-job-tracker-backend-d16d.onrender.com',
+       
         changeOrigin: true,
         secure: false,
       },

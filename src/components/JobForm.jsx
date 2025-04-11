@@ -11,14 +11,16 @@ const JobForm = ({ onJobAdded }) => {
     link: '',
   });
 
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
     try {
-      const response = await axios.post('/api/jobs', formData);
+      const response = await axios.post(`${API_BASE}/jobs`, formData);
       console.log('Job added:', response.data);
       setFormData({
         company: '',

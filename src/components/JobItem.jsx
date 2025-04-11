@@ -4,10 +4,11 @@ import axios from 'axios';
 const JobItem = ({ job, onUpdate, onDelete }) => {
   const [status, setStatus] = useState(job.status);
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
   const handleStatusUpdate = async (newStatus) => {
     try {
       console.log(`Updating job ${job._id} to status: ${newStatus}`);
-      const response = await axios.put(`/api/jobs/${job._id}`, { status: newStatus });
+      const response = await axios.put(`${API_BASE}/jobs/${job._id}`, { status: newStatus });
       console.log('Update response:', response.data);
       setStatus(newStatus);
       if (onUpdate) onUpdate();
@@ -20,7 +21,7 @@ const JobItem = ({ job, onUpdate, onDelete }) => {
   const handleDelete = async () => {
     try {
       console.log(`Deleting job ${job._id}`);
-      await axios.delete(`/api/jobs/${job._id}`);
+      await axios.delete(`${API_BASE}/jobs/${job._id}`);
       if (onDelete) onDelete();
     } catch (error) {
       console.error('Error deleting job:', error.response?.data || error.message);

@@ -7,10 +7,12 @@ const JobList = () => {
   const [statusFilter, setStatusFilter] = useState('All');
   const [sortOrder, setSortOrder] = useState('newest');
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
   const fetchJobs = async () => {
+   
     try {
       console.log('Fetching jobs...');
-      const response = await axios.get('/api/jobs');
+      const response = await axios.get(`${API_BASE}/jobs`);
       setJobs(response.data);
     } catch (error) {
       console.error('Error fetching jobs:', error.response?.data || error.message);
