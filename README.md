@@ -20,7 +20,7 @@ This is a full-stack "Student Job Tracker" web app.It helps students manage job 
 - **Deployment**: Frontend on Vercel, Backend on Render.
 
 **## 🎉 Live Urls**:
-- Frontend: [https://student-job-tracker-frontend-theta.vercel.app/](https://student-job-tracker-frontend-theta.vercel.app/)
+- Frontend: [https://student-job-tracker-frontend-kx8s.vercel.app/](https://student-job-tracker-frontend-kx8s.vercel.app/)
 - Backend API: [https://student-job-tracker-backend-d16d.onrender.com](https://student-job-tracker-backend-d16d.onrender.com)
 - Backend Repo: [https://github.com/KAZI-AZAHAR-UDDIN/student-job-tracker-backend](https://github.com/KAZI-AZAHAR-UDDIN/student-job-tracker-backend)
 
